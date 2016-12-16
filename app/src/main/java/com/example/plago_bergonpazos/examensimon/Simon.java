@@ -1,4 +1,5 @@
 package com.example.plago_bergonpazos.examensimon;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +15,7 @@ public class Simon extends AppCompatActivity {
     private static int numeroMilis = 0;
     private android.os.Handler handler = new android.os.Handler();
     private android.os.Handler handler1 = new android.os.Handler();
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -172,11 +174,17 @@ public class Simon extends AppCompatActivity {
             }
         }
         if (victoria){
+            intent = new Intent(getBaseContext(),MainActivity.class);
+            startActivity(intent);
             System.out.println("ganaste");
             Toast.makeText(this,"GANASTE, PULSA 'EMPEZAR' PARA JUGAR OTRA VEZ",Toast.LENGTH_LONG).show();
+
         }else{
+            intent = new Intent(getBaseContext(),MainActivity.class);
+            startActivity(intent);
             System.out.println("Perdiste");
-            Toast.makeText(this,"PERDISTE, SE CIERRA LA APP",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"PERDISTE, LOOOOOSER",Toast.LENGTH_LONG).show();
+
 
         }
 
