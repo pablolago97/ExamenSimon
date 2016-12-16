@@ -174,12 +174,15 @@ public class Simon extends AppCompatActivity {
             }
         }
         if (victoria){
+            //Declaro un intent e inicio su actividad, la cual llama a una clase main vacia
             intent = new Intent(getBaseContext(),MainActivity.class);
             startActivity(intent);
             System.out.println("ganaste");
             Toast.makeText(this,"GANASTE, PULSA 'EMPEZAR' PARA JUGAR OTRA VEZ",Toast.LENGTH_LONG).show();
 
         }else{
+            //Declaro un intent e inicio su actividad, la cual llama a una clase main vacia (está hecho lo más sencillo posible)
+            //LLamo al toas posteriormente para la lectura del mensaje en la ActivityMain
             intent = new Intent(getBaseContext(),MainActivity.class);
             startActivity(intent);
             System.out.println("Perdiste");
